@@ -10,14 +10,14 @@ class Rating extends Model
     use HasFactory;
 
     protected $fillable = [
-        'user_id', 'movie_id', 'rating'
+        'audience_id', 'movie_id', 'rating'
     ];
 
     public function movie(){
         return $this->belongsTo(Movie::class);
     }
 
-    public function user(){
-        return $this->belongsTo(User::class);
+    public function audience(){
+        return $this->belongsTo(Audience::class);
     }
 }
